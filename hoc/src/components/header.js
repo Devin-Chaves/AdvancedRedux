@@ -10,10 +10,12 @@ class Header extends Component {
         <button onClick={() => this.props.authenticate(false)}>Sign Out</button>
       );
     }
+
     return (
-      <button onClick={() => this.props.authenticate(true)}>Sign Out</button>
+      <button onClick={() => this.props.authenticate(true)}>Sign In</button>
     );
   }
+
   render() {
     return (
       <nav className="navbar navbar-light">
@@ -34,4 +36,5 @@ class Header extends Component {
 function mapStateToProps(state) {
   return { authenticated: state.authenticated };
 }
+
 export default connect(mapStateToProps, actions)(Header);
