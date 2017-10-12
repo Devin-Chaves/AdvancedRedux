@@ -15,3 +15,9 @@ class UserList extends Component {
     return <div>{this.props.user.map(this.renderUser)}</div>;
   }
 }
+
+function mapStateToProps(state) {
+  return { users: state.users };
+}
+
+export default connect(mapStateToProps)(UserList);
