@@ -1,8 +1,8 @@
-# Higher Order Components
+# Middlewares
 ```
 > git clone https://github.com/Devin-Chaves/AdvancedRedux.git
 > cd AdvancedRedux
-> cd hoc
+> cd middlewares
 > npm install
 > npm start
 ```
