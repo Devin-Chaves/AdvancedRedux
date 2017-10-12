@@ -5,6 +5,12 @@ export default function({ dispatch }) {
     if (!action.payload || !action.payload.then) {
       return next(action);
     }
-    console.log('We dont have a promise', action);
+    //Make sure the actions promise resolves
+    action.payload.then(function(response) {
+      // create a new action with the old type, but
+      // replace the promse with the response data
+      const newAction = { ...action, payload: response };
+      dispatch(newAction);
+    });
   };
 }
